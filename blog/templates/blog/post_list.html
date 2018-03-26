@@ -8,7 +8,18 @@
 </head>
 <body>
 
-    <h1>hola mundo</h1>
+    <div>
+        <h1><a href="/">Django Proyecto Webapp Blog</a></h1>
+    </div>
+
+    {% for post in posts %}
+    <div>
+        <p>Publicado el: {{post.fecha_de_publicacion}}</p>
+        <h1><a href="">{{post.title}}</a></h1>
+        <p>{{post.text|linebreaksbr}}</p>
+    </div>
+    {% endfor %}
+    
     
 </body>
 </html>
